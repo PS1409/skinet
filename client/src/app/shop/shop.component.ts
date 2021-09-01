@@ -14,7 +14,7 @@ import { ShopParams } from '../shared/models/shopparams';
   styleUrls: ['./shop.component.scss']
 })
 export class ShopComponent implements OnInit {
-  @ViewChild('search', { static: true }) searchItem: ElementRef;
+  @ViewChild('search', { static: false }) searchItem: ElementRef;
   products: IProduct[];
   brands: IBrand[];
   productTypes: IProductType[];
