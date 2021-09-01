@@ -7,7 +7,7 @@ namespace API.Controllers
 {
     public class BugController : BaseApiController
     {
-        private readonly ILogger<BugController> _logger;
+        //private readonly ILogger<BugController> _logger;
         private readonly StoreContext _context;
         public BugController(StoreContext context)
         {
