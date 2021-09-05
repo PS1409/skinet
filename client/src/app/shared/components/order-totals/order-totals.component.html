@@ -1,0 +1,27 @@
+<div class="bg-light px-3 py-2 text-uppercase font-weight-bold">
+    Order Summery
+</div>
+<div class="p-4">
+    <p class="font-italic mb-4">
+        Shipping Costs will be added on choices made during checkout
+    </p>
+    <ul class="list-unstyled mb-3" *ngIf="(basketTotals$ | async) as basketTotals">
+         <li class="d-flex justify-content-between py-2 border-bottom">
+            <strong class="text-muted">Subtotal</strong>
+            <strong>{{ basketTotals.subtotal | currency }}</strong>
+        </li>
+        <li class="d-flex justify-content-between py-2 border-bottom">
+            <strong class="text-muted">Shipping and handling charge</strong>
+            <strong>{{ basketTotals.shippingCharge | currency }}</strong>
+        </li>
+         <li class="d-flex justify-content-between py-2 border-bottom">
+            <strong class="text-muted">Cod Charges</strong>
+            <strong>{{ basketTotals.codCharge | currency }}</strong>
+        </li>
+        
+         <li class="d-flex justify-content-between py-2 border-bottom">
+            <strong class="text-muted">Total</strong>
+            <strong>{{ basketTotals.total | currency }}</strong>
+        </li>
+    </ul>
+</div>
