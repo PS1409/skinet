@@ -5,6 +5,8 @@ namespace API.Dtos
     public class BasketItemDto
     {
         [Required]
+        public int Id { get; set;}
+        [Required]
         public string ProductName { get; set; }
          
         [Required]
